@@ -39,34 +39,5 @@ void Ciudad::setPoblacion(int val)
 void Ciudad::mostrar(){
     cout << _ID << " " << _idpais << " " << _nombre << " " << _poblacion << endl;
 }
-bool Ciudad::leerDisco(int pos){
-    FILE *p;
-    p = fopen("ciudades.dat", "rb");
-    if (!p)
-        return false;
-    fseek(p, sizeof(Ciudad) * pos, 0);
-    bool ok = fread(this, sizeof(Ciudad), 1, p);
-    fclose(p);
-    return ok;
-}
-bool Ciudad::guardarDisco(){
-    FILE *p;
-    p = fopen("ciudades.dat", "ab");
-    if (!p)
-    return false;
-    bool ok = fwrite(this, sizeof(Ciudad), 1, p);
-    fclose(p);
-    return ok;
-}
-bool Ciudad::guardarDisco(int pos){
-    FILE *p;
-    p = fopen("ciudades.dat", "rb+");
-    if (!p)
-    return false;
-    fseek(p, sizeof(Ciudad) * pos, 0);
-    bool ok = fwrite(this, sizeof(Ciudad), 1, p);
-    fclose(p);
-    return ok;
-}
 
 

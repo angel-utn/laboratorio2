@@ -12,9 +12,6 @@ class Ciudad
     void setIDPais(const char *);
     void setNombre(const char *);
     void setPoblacion(int);
-    bool leerDisco(int);
-    bool guardarDisco();
-    bool guardarDisco(int);
     void mostrar();
 
     private:

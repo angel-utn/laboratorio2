@@ -62,35 +62,3 @@ float Pais::getExpectativaDeVida(){
 int Pais::getIDCapital(){
     return _capital;
 }
-
-
-
-bool Pais::leerDisco(int pos){
-    FILE *p;
-    p = fopen("paises.dat", "rb");
-    if (!p)
-        return false;
-    fseek(p, sizeof(Pais) * pos, 0);
-    bool ok = fread(this, sizeof(Pais), 1, p);
-    fclose(p);
-    return ok;
-}
-bool Pais::guardarDisco(){
-    FILE *p;
-    p = fopen("paises.dat", "ab");
-    if (!p)
-    return false;
-    bool ok = fwrite(this, sizeof(Pais), 1, p);
-    fclose(p);
-    return ok;
-}
-bool Pais::guardarDisco(int pos){
-    FILE *p;
-    p = fopen("paises.dat", "rb+");
-    if (!p)
-    return false;
-    fseek(p, sizeof(Pais) * pos, 0);
-    bool ok = fwrite(this, sizeof(Pais), 1, p);
-    fclose(p);
-    return ok;
-}

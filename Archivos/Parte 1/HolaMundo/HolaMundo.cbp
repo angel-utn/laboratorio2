@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Ciudad.cpp" />
+		<Unit filename="Ciudad.h" />
+		<Unit filename="Pais.cpp" />
+		<Unit filename="Pais.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

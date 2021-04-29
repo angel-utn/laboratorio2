@@ -15,9 +15,6 @@ class Pais{
         int _capital;
     public:
         void mostrar();
-        bool guardarDisco();
-        bool guardarDisco(int);
-        bool leerDisco(int);
 
         void setCodigo(const char *);
         void setCodigo2(const char *);
